@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiorella Traina · Cheffe de projet digital</title>
+<meta name="description" content="Fiorella Traina — Cheffe de projet digital Web & e-commerce. Candidature Chef de projet / Product Owner Web & eCommerce chez eXalt, Lyon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFDF8; --surface:#FFFFFF; --soft:#FFF4DE; --ink:#1D1B26; --muted:#5E5A6B;
+    --line:#ECE6DA; --accent:#F4A928; --accent-ink:#8A5A00; --deep:#2B2840;
+    --radius:18px; --shadow:0 10px 30px rgba(29,27,38,.07);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#15141C; --surface:#1E1D28; --soft:#2A2533; --ink:#F3F1F7; --muted:#B4AFC2;
+      --line:#2F2D3B; --accent:#F6B43F; --accent-ink:#F6B43F; --deep:#0E0D14;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Montserrat,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px}
+  a{color:inherit}
+  html[data-lang="fr"] [lang="en"]:not(html), html[data-lang="en"] [lang="fr"]:not(html){display:none !important}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+  .logo{font-weight:800;letter-spacing:.02em;text-decoration:none}
+  .logo b{color:var(--accent)}
+  .links{display:flex;gap:22px;font-size:14px;font-weight:500}
+  .links a{text-decoration:none;color:var(--muted)}
+  .links a:hover{color:var(--ink)}
+  .toggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px;font-weight:700}
+  .toggle button{border:0;background:transparent;color:var(--muted);padding:6px 12px;cursor:pointer;font:inherit}
+  .toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+  /* hero */
+  header.hero{padding:72px 0 56px}
+  .hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+  .tag{display:inline-flex;align-items:center;gap:8px;background:var(--soft);color:var(--accent-ink);font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px}
+  .tag i{width:8px;height:8px;border-radius:50%;background:#22A06B;display:inline-block}
+  h1{font-size:clamp(38px,6vw,64px);line-height:1.05;font-weight:800;margin:18px 0 10px;letter-spacing:-.02em}
+  .role{font-size:clamp(18px,2.4vw,22px);font-weight:600;color:var(--muted)}
+  .role em{font-style:normal;color:var(--accent-ink)}
+  .pitch{margin:22px 0 28px;font-size:17px;max-width:560px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:700;text-decoration:none;font-size:15px;border:2px solid var(--ink)}
+  .btn.primary{background:var(--ink);color:var(--bg)}
+  .btn:hover{transform:translateY(-1px)}
+  .photo{position:relative;justify-self:center;width:min(300px,80vw);aspect-ratio:1;border-radius:32px;background:var(--accent);display:grid;place-items:center;overflow:hidden;box-shadow:var(--shadow)}
+  .photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+  .photo .initials{font-size:96px;font-weight:800;color:#1D1B26}
+  .badge{position:absolute;bottom:14px;left:14px;right:14px;background:var(--surface);color:var(--ink);border-radius:14px;padding:10px 14px;font-size:13px;font-weight:600;box-shadow:var(--shadow)}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:56px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .stat b{display:block;font-size:32px;font-weight:800;line-height:1.1}
+  .stat span{font-size:14px;color:var(--muted)}
+
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  .kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+  h2{font-size:clamp(28px,4vw,38px);line-height:1.15;font-weight:800;margin:8px 0 14px;letter-spacing:-.01em}
+  .lead{color:var(--muted);max-width:680px;margin-bottom:36px}
+
+  /* match */
+  .match{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .m{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:grid;gap:10px}
+  .m .need{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .m .have{font-weight:600}
+  .m .have::before{content:"→ ";color:var(--accent)}
+  .m p{font-size:14.5px;color:var(--muted)}
+
+  /* timeline */
+  .tl{display:grid;gap:16px}
+  .job{display:grid;grid-template-columns:180px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .job.now{border:2px solid var(--accent)}
+  .when{font-size:14px;font-weight:700;color:var(--muted)}
+  .when small{display:block;font-weight:600;color:var(--accent-ink)}
+  .job h3{font-size:19px;font-weight:700;margin-bottom:8px}
+  .job ul{list-style:none;display:grid;gap:6px}
+  .job li{padding-left:18px;position:relative;font-size:15px}
+  .job li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+
+  /* AI */
+  .ai{background:var(--deep);color:#F3F1F7;border-radius:28px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+  .ai .kicker{color:var(--accent)}
+  .ai .lead{color:#C9C4D8;margin-bottom:22px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600}
+  .ai .chip{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15);color:#F3F1F7}
+  .ai-list{display:grid;gap:12px}
+  .ai-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
+  .ai-card b{display:block;margin-bottom:4px}
+  .ai-card p{font-size:14.5px;color:#C9C4D8}
+
+  /* tools */
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .tool h3{font-size:16px;margin-bottom:12px}
+
+  /* international */
+  .intl{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .city{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .city.hl{background:var(--soft);border-color:var(--accent)}
+  .city b{font-size:18px;display:block}
+  .city small{color:var(--accent-ink);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+  .city p{font-size:14px;color:var(--muted);margin-top:8px}
+  .langs{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+  .lang{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 18px;font-weight:600}
+  .lang span{color:var(--muted);font-weight:500;font-size:14px}
+
+  /* plan */
+  .plan{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .step{border-top:4px solid var(--accent);background:var(--surface);border-radius:0 0 var(--radius) var(--radius);padding:22px;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .step b{font-size:28px;font-weight:800}
+  .step h3{font-size:16px;margin:4px 0 8px}
+  .step p{font-size:14.5px;color:var(--muted)}
+
+  .edu{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+  footer{padding:72px 0 56px;border-top:1px solid var(--line);text-align:center}
+  footer h2{margin-bottom:12px}
+  footer .cta{justify-content:center;margin-top:26px}
+  .fine{margin-top:40px;font-size:13px;color:var(--muted)}
+
+  @media (max-width:860px){
+    .links{display:none}
+    .hero-grid,.ai{grid-template-columns:1fr}
+    .photo{order:-1;width:200px}
+    .photo .initials{font-size:64px}
+    .badge{display:none}
+    .stats,.intl{grid-template-columns:repeat(2,1fr)}
+    .match,.tools,.plan,.edu{grid-template-columns:1fr}
+    .job{grid-template-columns:1fr;gap:8px}
+    .ai{padding:28px 22px}
+    header.hero{padding:40px 0}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Fiorella <b>Traina</b></a>
+    <div class="links">
+      <a href="#match"><span lang="fr">Pourquoi moi</span><span lang="en">Why me</span></a>
+      <a href="#exp"><span lang="fr">Expériences</span><span lang="en">Experience</span></a>
+      <a href="#ia"><span lang="fr">IA</span><span lang="en">AI</span></a>
+      <a href="#intl">International</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="toggle" role="group" aria-label="Langue / Language">
+      <button type="button" data-set="fr" aria-pressed="true">FR</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="tag"><i></i>
+          <span lang="fr">Candidature · Chef de projet Web/eCommerce · eXalt Lyon</span>
+          <span lang="en">Application · Web/eCommerce Project Manager · eXalt Lyon</span>
+        </span>
+        <h1>Fiorella Traina</h1>
+        <p class="role"><span lang="fr">Cheffe de projet digital</span><span lang="en">Digital Project Manager</span> · <em>Web &amp; e-commerce</em></p>
+        <p class="pitch">
+          <span lang="fr">Je pilote des projets de sites e-commerce chez Fiducial, je fais le lien entre plus de 400 clients et les équipes, et j'utilise l'IA au quotidien. Je veux mettre cette énergie au service de vos sites, de vos chatbots et de vos COPIL.</span>
+          <span lang="en">I run e-commerce website projects at Fiducial, connect 400+ clients with our teams, and use AI every day. I want to bring that energy to your websites, chatbots and steering committees.</span>
+        </p>
+        <div class="cta">
+          <a class="btn primary" id="mail" href="mailto:fiorellatraina13@gmail.com?subject=Candidature%20Chef%20de%20projet%20Web%2FeCommerce%20-%20Fiorella%20Traina">
+            <span lang="fr">Me contacter</span><span lang="en">Contact me</span>
+          </a>
+          <a class="btn" href="#match"><span lang="fr">Voir l'adéquation au poste</span><span lang="en">See the role fit</span></a>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="photo.jpg" alt="Fiorella Traina" onerror="this.remove()">
+        <span class="initials" aria-hidden="true">FT</span>
+        <div class="badge">📍 Lyon · <span lang="fr">Français · Italien · Anglais</span><span lang="en">French · Italian · English</span></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>400+</b><span lang="fr">clients suivis chez Fiducial</span><span lang="en">clients managed at Fiducial</span></div>
+      <div class="stat"><b>3</b><span lang="fr">langues : FR, IT, EN</span><span lang="en">languages: FR, IT, EN</span></div>
+      <div class="stat"><b>5</b><span lang="fr">expériences à l'étranger, dont Boston (IA) et Singapour</span><span lang="en">stints abroad, incl. Boston (AI) and Singapore</span></div>
+      <div class="stat"><b>3</b><span lang="fr">IA utilisées au quotidien : Claude, ChatGPT, Gemini</span><span lang="en">AI tools used daily: Claude, ChatGPT, Gemini</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="match">
+  <div class="wrap">
+    <p class="kicker"><span lang="fr">Votre besoin, mon expérience</span><span lang="en">Your needs, my experience</span></p>
+    <h2><span lang="fr">Ce que vous cherchez, ce que j'apporte</span><span lang="en">What you're looking for, what I bring</span></h2>
+    <p class="lead"><span lang="fr">Votre offre point par point, avec ce que j'ai déjà fait sur le terrain.</span><span lang="en">Your job description, point by point, with what I have already done on the job.</span></p>
+    <div class="match">
+      <div class="m">
+        <span class="need"><span lang="fr">Sites web &amp; eCommerce</span><span lang="en">Websites &amp; eCommerce</span></span>
+        <span class="have"><span lang="fr">Je gère plusieurs projets de sites e-commerce chez Fiducial</span><span lang="en">I manage several e-commerce website projects at Fiducial</span></span>
+        <p><span lang="fr">De la création à la mise en production, sur WordPress/Elementor, Shopify et la plateforme CMS interne.</span><span lang="en">From kick-off to go-live, on WordPress/Elementor, Shopify and our in-house CMS.</span></p>
+      </div>
+      <div class="m">
+        <span class="need"><span lang="fr">Recueillir et challenger les besoins métiers</span><span lang="en">Gather and challenge business needs</span></span>
+        <span class="have"><span lang="fr">400+ clients à écouter, cadrer et accompagner</span><span lang="en">400+ clients to listen to, scope and support</span></span>
+        <p><span lang="fr">La relation client est mon socle depuis l'alternance chez Club Employés (portefeuille de 200 clients).</span><span lang="en">Client relationships have been my core skill since my work-study role at Club Employés (200-client portfolio).</span></p>
+      </div>
+      <div class="m">
+        <span class="need"><span lang="fr">Ateliers de cadrage &amp; COPIL</span><span lang="en">Scoping workshops &amp; steering committees</span></span>
+        <span class="have"><span lang="fr">J'anime les réunions et je suis les décisions</span><span lang="en">I run meetings and follow up on decisions</span></span>
+        <p><span lang="fr">Supports préparés, réunions animées, plans d'action suivis dans Notion et Jira. J'ai aussi coordonné 5 équipes de 10 à 15 personnes chez Heracles Conseil.</span><span lang="en">I prepare the materials, run the meetings and track action plans in Notion and Jira. I also coordinated 5 teams of 10–15 people at Heracles Conseil.</span></p>
+      </div>
+      <div class="m">
+        <span class="need"><span lang="fr">User Stories &amp; suivi des développements</span><span lang="en">User stories &amp; delivery follow-up</span></span>
+        <span class="have"><span lang="fr">Jira au quotidien, de la création du projet à la production</span><span lang="en">Jira every day, from project creation to production</span></span>
+        <p><span lang="fr">Je traduis les demandes en tickets clairs, je suis la production et je valide avec les clients.</span><span lang="en">I turn requests into clear tickets, follow production and validate with clients.</span></p>
+      </div>
+      <div class="m">
+        <span class="need"><span lang="fr">Chatbot, IA, bases de connaissance</span><span lang="en">Chatbots, AI, knowledge bases</span></span>
+        <span class="have"><span lang="fr">Une vraie appétence IA, certifiée et pratiquée</span><span lang="en">A real interest in AI, certified and practised</span></span>
+        <p><span lang="fr">Claude, ChatGPT et Gemini au quotidien, des certifications IA, et une expérience à Boston dédiée à l'IA. Ce site a d'ailleurs été construit avec l'IA.</span><span lang="en">Claude, ChatGPT and Gemini every day, AI certifications, and an AI-focused programme in Boston. This website was built with AI too.</span></p>
+      </div>
+      <div class="m">
+        <span class="need"><span lang="fr">KPIs &amp; A/B tests</span><span lang="en">KPIs &amp; A/B testing</span></span>
+        <span class="have"><span lang="fr">Google Analytics pour mesurer et améliorer</span><span lang="en">Google Analytics to measure and improve</span></span>
+        <p><span lang="fr">Suivi de la performance des sites, et une culture du test héritée du growth hacking à Singapour et de mes projets de gamification (hackathon LOU Rugby / GL events).</span><span lang="en">Website performance tracking, plus a test-and-learn mindset from growth hacking in Singapore and my gamification projects (LOU Rugby / GL events hackathon).</span></p>
+      </div>
+      <div class="m">
+        <span class="need"><span lang="fr">Contexte international</span><span lang="en">International context</span></span>
+        <span class="have"><span lang="fr">Trilingue, avec 5 expériences à l'étranger</span><span lang="en">Trilingual, with 5 experiences abroad</span></span>
+        <p><span lang="fr">Boston, Singapour, Barcelone, Dublin et Montréal. L'italien est la « langue en plus » que vous mentionnez.</span><span lang="en">Boston, Singapore, Barcelona, Dublin and Montreal. Italian is the "any other language" bonus you mention.</span></p>
+      </div>
+      <div class="m">
+        <span class="need"><span lang="fr">Chef d'orchestre transverse</span><span lang="en">Cross-functional conductor</span></span>
+        <span class="have"><span lang="fr">Clients, équipes et outils internes à coordonner</span><span lang="en">Clients, teams and internal tools to coordinate</span></span>
+        <p><span lang="fr">Ancienne capitaine d'équipe de handball : faire avancer un collectif dans la même direction, je connais.</span><span lang="en">As a former handball team captain, I know how to move a team in the same direction.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="exp">
+  <div class="wrap">
+    <p class="kicker"><span lang="fr">Parcours</span><span lang="en">Background</span></p>
+    <h2><span lang="fr">Expériences</span><span lang="en">Experience</span></h2>
+    <div class="tl">
+      <div class="job now">
+        <div class="when"><span lang="fr">2025 – aujourd'hui</span><span lang="en">2025 – present</span><small>Fiducial · Lyon</small></div>
+        <div>
+          <h3><span lang="fr">Cheffe de projet digital · Web &amp; e-commerce</span><span lang="en">Digital Project Manager · Web &amp; e-commerce</span></h3>
+          <ul>
+            <li><span lang="fr">Pilotage de plusieurs projets de sites e-commerce en parallèle</span><span lang="en">Managing several e-commerce website projects in parallel</span></li>
+            <li><span lang="fr">Création des projets, production et gestion jusqu'à la livraison</span><span lang="en">Project creation, production and management through to delivery</span></li>
+            <li><span lang="fr">Relation et suivi de plus de 400 clients</span><span lang="en">Relationship and follow-up with 400+ clients</span></li>
+            <li><span lang="fr">Animation des réunions avec les clients et les équipes internes</span><span lang="en">Running meetings with clients and internal teams</span></li>
+            <li><span lang="fr">Outils : Jira, Notion, Google Analytics, WordPress/Elementor, Shopify, CMS interne, CRM Zoho</span><span lang="en">Tools: Jira, Notion, Google Analytics, WordPress/Elementor, Shopify, in-house CMS, Zoho CRM</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2024 – 2025<small>Club Employés · Lyon</small></div>
+        <div>
+          <h3><span lang="fr">Account Manager (alternance)</span><span lang="en">Account Manager (work-study)</span></h3>
+          <ul>
+            <li><span lang="fr">Relation et suivi d'un portefeuille de 200 clients</span><span lang="en">Managed a portfolio of 200 clients</span></li>
+            <li><span lang="fr">Gestion des jeux concours</span><span lang="en">Ran the online contests programme</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2024<small>Heracles Conseil · Lyon</small></div>
+        <div>
+          <h3><span lang="fr">Assistante manager (stage)</span><span lang="en">Assistant Manager (internship)</span></h3>
+          <ul>
+            <li><span lang="fr">Coordination de 5 équipes de 10 à 15 stagiaires</span><span lang="en">Coordinated 5 teams of 10–15 interns</span></li>
+            <li><span lang="fr">Attribution des missions, reporting et suivi RH</span><span lang="en">Assigned missions, reporting and HR follow-up</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2023<small>Indigo · Carrefour · Musilac</small></div>
+        <div>
+          <h3><span lang="fr">Community manager, retail &amp; événementiel</span><span lang="en">Community manager, retail &amp; events</span></h3>
+          <ul>
+            <li><span lang="fr">Animation et gestion des réseaux sociaux (Indigo)</span><span lang="en">Social media management (Indigo)</span></li>
+            <li><span lang="fr">Merchandising, stocks et fidélisation (Carrefour), festival Musilac</span><span lang="en">Merchandising, stock and loyalty (Carrefour), Musilac festival</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ia">
+  <div class="wrap">
+    <div class="ai">
+      <div>
+        <p class="kicker"><span lang="fr">Appétence IA</span><span lang="en">AI mindset</span></p>
+        <h2><span lang="fr">L'IA, je la pratique tous les jours</span><span lang="en">I use AI every single day</span></h2>
+        <p class="lead"><span lang="fr">Votre offre demande une « appétence IA forte ». Voici comment je l'utilise déjà dans mon travail.</span><span lang="en">Your offer asks for a "strong appetite for AI". Here is how I already use it at work.</span></p>
+        <div class="chips">
+          <span class="chip">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span>
+          <span class="chip"><span lang="fr">Certifications IA</span><span lang="en">AI certifications</span></span>
+          <span class="chip">Boston · <span lang="fr">IA</span><span lang="en">AI</span></span>
+        </div>
+      </div>
+      <div class="ai-list">
+        <div class="ai-card">
+          <b><span lang="fr">Au quotidien</span><span lang="en">Day to day</span></b>
+          <p><span lang="fr">Rédaction de cahiers des charges, synthèses de réunion, contenus de sites et réponses clients, plus vite et mieux structurés.</span><span lang="en">Drafting specs, meeting summaries, website content and client replies, faster and better structured.</span></p>
+        </div>
+        <div class="ai-card">
+          <b><span lang="fr">Boston</span><span lang="en">Boston</span></b>
+          <p><span lang="fr">Une expérience à l'étranger centrée sur l'IA, en anglais, au contact d'autres profils internationaux.</span><span lang="en">An experience abroad focused on AI, in English, alongside international peers.</span></p>
+        </div>
+        <div class="ai-card">
+          <b><span lang="fr">Pour vos chatbots</span><span lang="en">For your chatbots</span></b>
+          <p><span lang="fr">Je sais structurer une base de connaissance, écrire des scénarios conversationnels et tester des réponses : la base pour alimenter et améliorer un chatbot.</span><span lang="en">I know how to structure a knowledge base, write conversation flows and test answers: the foundation for feeding and improving a chatbot.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="outils">
+  <div class="wrap">
+    <p class="kicker"><span lang="fr">Boîte à outils</span><span lang="en">Toolbox</span></p>
+    <h2><span lang="fr">Outils et compétences</span><span lang="en">Tools and skills</span></h2>
+    <div class="tools">
+      <div class="tool">
+        <h3><span lang="fr">Gestion de projet</span><span lang="en">Project management</span></h3>
+        <div class="chips"><span class="chip">Jira</span><span class="chip">Notion</span><span class="chip">CRM Zoho</span></div>
+      </div>
+      <div class="tool">
+        <h3>Web &amp; e-commerce</h3>
+        <div class="chips"><span class="chip">WordPress / Elementor</span><span class="chip">Shopify</span><span class="chip"><span lang="fr">CMS interne</span><span lang="en">In-house CMS</span></span><span class="chip">HTML / CSS</span><span class="chip">Figma</span></div>
+      </div>
+      <div class="tool">
+        <h3><span lang="fr">Data &amp; marketing</span><span lang="en">Data &amp; marketing</span></h3>
+        <div class="chips"><span class="chip">Google Analytics</span><span class="chip">SEO</span><span class="chip">Suite Adobe</span><span class="chip"><span lang="fr">Réseaux sociaux</span><span lang="en">Social media</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="intl">
+  <div class="wrap">
+    <p class="kicker">International</p>
+    <h2><span lang="fr">Habituée aux équipes internationales</span><span lang="en">Used to international teams</span></h2>
+    <p class="lead"><span lang="fr">Cinq expériences à l'étranger, à chaque fois sur un projet concret, en anglais.</span><span lang="en">Five experiences abroad, each one on a real project, in English.</span></p>
+    <div class="intl">
+      <div class="city hl"><small><span lang="fr">IA · le plus récent</span><span lang="en">AI · most recent</span></small><b>Boston 🇺🇸</b><p><span lang="fr">Programme centré sur l'intelligence artificielle.</span><span lang="en">Programme focused on artificial intelligence.</span></p></div>
+      <div class="city hl"><small>Growth hacking</small><b><span lang="fr">Singapour</span><span lang="en">Singapore</span> 🇸🇬</b><p><span lang="fr">Expérience en growth hacking : tester vite, mesurer, itérer pour accélérer l'acquisition.</span><span lang="en">Growth hacking experience: test fast, measure, iterate to speed up acquisition.</span></p></div>
+      <div class="city"><small>Pompeu Fabra</small><b><span lang="fr">Barcelone</span><span lang="en">Barcelona</span> 🇪🇸</b><p><span lang="fr">Création d'une marque et de son site e-commerce sur Shopify.</span><span lang="en">Built a brand and its e-commerce website on Shopify.</span></p></div>
+      <div class="city"><small>St Patrick's · DCU</small><b>Dublin 🇮🇪</b><p><span lang="fr">Création de marque et stratégie de communication.</span><span lang="en">Brand creation and communication strategy.</span></p></div>
+      <div class="city"><small>UQAM</small><b><span lang="fr">Montréal</span><span lang="en">Montreal</span> 🇨🇦</b><p><span lang="fr">Projet de gamification.</span><span lang="en">Gamification project.</span></p></div>
+    </div>
+    <div class="langs">
+      <div class="lang">🇫🇷 <span lang="fr">Français</span><span lang="en">French</span> <span><span lang="fr">langue maternelle</span><span lang="en">native</span></span></div>
+      <div class="lang">🇮🇹 <span lang="fr">Italien</span><span lang="en">Italian</span> <span>B2 · <span lang="fr">bac section européenne</span><span lang="en">European-section baccalaureate</span></span></div>
+      <div class="lang">🇬🇧 <span lang="fr">Anglais</span><span lang="en">English</span> <span>B1 · <span lang="fr">pratiqué à Boston, Singapour, Dublin, Montréal</span><span lang="en">used in Boston, Singapore, Dublin, Montreal</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="wrap">
+    <p class="kicker"><span lang="fr">Si vous me recrutez</span><span lang="en">If you hire me</span></p>
+    <h2><span lang="fr">Mes 90 premiers jours chez eXalt</span><span lang="en">My first 90 days at eXalt</span></h2>
+    <p class="lead"><span lang="fr">Une première proposition, à ajuster avec vous et le client.</span><span lang="en">A first draft, to adjust with you and the client.</span></p>
+    <div class="plan">
+      <div class="step"><b>30</b><h3><span lang="fr">Comprendre</span><span lang="en">Understand</span></h3><p><span lang="fr">Rencontrer les métiers et les équipes IT, cartographier les sites, le chatbot et leurs KPIs actuels.</span><span lang="en">Meet business and IT teams, map the websites, the chatbot and their current KPIs.</span></p></div>
+      <div class="step"><b>60</b><h3><span lang="fr">Prioriser</span><span lang="en">Prioritise</span></h3><p><span lang="fr">Construire un backlog clair en User Stories et lancer un premier A/B test sur un parcours du chatbot.</span><span lang="en">Build a clear user-story backlog and launch a first A/B test on one chatbot flow.</span></p></div>
+      <div class="step"><b>90</b><h3><span lang="fr">Livrer</span><span lang="en">Deliver</span></h3><p><span lang="fr">Présenter en COPIL les premiers résultats et le plan d'amélioration de la base de connaissance.</span><span lang="en">Present first results and the knowledge-base improvement plan at the steering committee.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="formation">
+  <div class="wrap">
+    <p class="kicker"><span lang="fr">Formation</span><span lang="en">Education</span></p>
+    <h2><span lang="fr">Formation</span><span lang="en">Education</span></h2>
+    <div class="edu">
+      <div class="job" style="grid-template-columns:1fr">
+        <div class="when">2025 – 2027<small>SMBS · Lyon</small></div>
+        <div><h3><span lang="fr">Mastère of Business in Health</span><span lang="en">Master of Business in Health</span></h3></div>
+      </div>
+      <div class="job" style="grid-template-columns:1fr">
+        <div class="when">2022 – 2025<small>ESCEN · Lyon</small></div>
+        <div>
+          <h3><span lang="fr">Bachelor Marketing digital</span><span lang="en">Bachelor in Digital Marketing</span></h3>
+          <ul>
+            <li><span lang="fr">Hackathon LOU Rugby / GL events : programme de fidélité gamifié</span><span lang="en">LOU Rugby / GL events hackathon: gamified loyalty programme</span></li>
+            <li><span lang="fr">Lauréate du projet associatif « Fabricollect » contre la précarité</span><span lang="en">Winner of the "Fabricollect" charity project against poverty</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="chips" style="margin-top:22px">
+      <span class="chip"><span lang="fr">Certifications IA</span><span lang="en">AI certifications</span></span>
+      <span class="chip"><span lang="fr">Gestion de projet digital</span><span lang="en">Digital project management</span></span>
+      <span class="chip"><span lang="fr">Marketing numérique (Google)</span><span lang="en">Digital marketing (Google)</span></span>
+      <span class="chip"><span lang="fr">Stratégie Social Media</span><span lang="en">Social media strategy</span></span>
+      <span class="chip">Projet Voltaire</span>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="kicker"><span lang="fr">On en parle ?</span><span lang="en">Shall we talk?</span></p>
+    <h2><span lang="fr">Prête à rejoindre le collectif eXalt</span><span lang="en">Ready to join the eXalt team</span></h2>
+    <p class="lead" style="margin:0 auto"><span lang="fr">Disponible pour un échange à Lyon ou en visio, en français, en anglais ou en italien.</span><span lang="en">Available to meet in Lyon or by video call, in French, English or Italian.</span></p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:fiorellatraina13@gmail.com?subject=Candidature%20Chef%20de%20projet%20Web%2FeCommerce%20-%20Fiorella%20Traina">✉️ fiorellatraina13@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="fine"><span lang="fr">Site créé avec l'IA (Claude) · Lyon, 2026</span><span lang="en">Website built with AI (Claude) · Lyon, 2026</span></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var root=document.documentElement, btns=document.querySelectorAll('.toggle button');
+    function set(l){
+      root.setAttribute('data-lang',l); root.setAttribute('lang',l);
+      btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l)});
+      try{localStorage.setItem('ft-lang',l)}catch(e){}
+    }
+    btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
+    var saved=null; try{saved=localStorage.getItem('ft-lang')}catch(e){}
+    if(saved==='en'||saved==='fr') set(saved);
+  })();
+</script>
+</body>
+</html>
